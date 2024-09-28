@@ -14,68 +14,52 @@ const Teachers = () => {
         speed: 2000,
         autoplaySpeed: 3000,
         centerPadding: "60px",
+        arrows: false
     };
 
     const Courses = [
         {
-            image: "/Courses.png",
-            title: "Web Development"
+            image: "/Instructors1.jpeg",
+            title: "Sir Kamran"
         },
         {
-            image: "/Courses.png",
-            title: "Cyber Security"
+            image: "/Instructors2.jpeg",
+            title: "Sir Bilal"
         },
         {
-            image: "/Courses.png",
-            title: "Graphic Designing"
-        },
-        {
-            image: "/Courses.png",
-            title: "Java Programming"
-        },
-        {
-            image: "/Courses.png",
-            title: "App Development"
-        },
-        {
-            image: "/Courses.png",
-            title: "Python Course"
-        },
-        {
-            image: "/Courses.png",
-            title: "Generative AI"
-        },
-        {
-            image: "/Courses.png",
-            title: "Chatbot"
+            image: "/Instructors3.jpeg",
+            title: "Sir Ghous"
         },
     ]
 
     return (
-        <div className="my-20 w-full mx-auto px-10">
-            <Slider {...settings}>
-                {
-                    Courses.map((item, index) => {
-                        return (
-                            <div key={index} className="flex justify-center"> {/* Added flex & justify-center */}
-                                <div className="card bg-base-100 shadow-xl border cursor-pointer w-96"> {/* Changed max-w-96 to w-96 */}
-                                    <figure>
-                                        <img
-                                            src={item.image}
-                                            alt="Course" />
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">{item.title}</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div className="my-20">
+            <h1 className='text-center text-[40px] font-semibold text-blue-600'>Our <span className='text-green-600'>Teachers</span></h1>
+
+            <div className="my-20 w-full mx-auto px-10">
+                <Slider {...settings}>
+                    {
+                        Courses.map((item, index) => {
+                            return (
+                                <div key={index} className="flex justify-center">
+                                    <div className="card bg-base-100 shadow-xl border cursor-pointer w-[330px] h-96">
+                                        <figure className="h-[70%]">
+                                            <img
+                                                src={item.image}
+                                                alt="Course" />
+                                        </figure>
+                                        <div className="card-body">
+                                            <h2 className="card-title">{item.title}</h2>
+                                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        );
-                    })
-                }
-            </Slider>
+                            );
+                        })
+                    }
+                </Slider>
+            </div>
         </div>
-
     );
 }
 

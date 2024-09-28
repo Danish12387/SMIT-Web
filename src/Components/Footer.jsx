@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-800 text-white py-5 mt-4">
+        <footer className="bg-blue-600 text-white py-5 mt-4">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 <div className="flex items-center space-x-2">
                     {/* <FaMapMarkerAlt className="text-red-500 text-2xl" /> */}
