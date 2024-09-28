@@ -1,2 +1,2 @@
-# SMIT-Web
+# SMIT Website
  
