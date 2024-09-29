@@ -17,7 +17,7 @@ const Navbar = () => {
           <Link to="#" className="rounded-full hover:bg-blue-600 py-1 px-4 transition duration-300 hover:text-white mx-2 text-md text-black">Contact</Link>
         </div>
         <div className="navbar-end">
-          <Link to="#" className="btn btn-active bg-green-500 text-white hover:bg-green-600 hover:scale-105 transition">
+          <Link to="#" className="btn btn-active bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition">
             <button className="text-[13px]">Apply Now</button>
           </Link>
         </div>

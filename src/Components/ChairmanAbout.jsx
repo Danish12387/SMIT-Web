@@ -1,4 +1,5 @@
 import React from "react";
+import { FiChevronRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const ChairmanAbout = () => {
@@ -13,7 +14,7 @@ const ChairmanAbout = () => {
                         Saylani Mass IT Training (SMIT) is a flagship program launched by the Saylani Welfare International Trust, aimed at equipping individuals with cutting-edge IT skills to meet the growing demands of the digital economy.
                     </p>
                     <Link to="/about" className="btn btn-active bg-blue-700 text-white hover:bg-blue-600 hover:scale-105 transition anim-left">
-                        <button>Read More</button>
+                        <button>Read More </button><FiChevronRight className="text-xl"/>
                     </Link>
                 </div>
 

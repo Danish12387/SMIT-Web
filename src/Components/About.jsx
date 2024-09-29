@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FiChevronRight } from "react-icons/fi";
 
 const About = () => {
 
@@ -12,7 +13,7 @@ const About = () => {
             Saylani Welfare is dedicated to serving humanity, with a mission to break the cycle of poverty through education, healthcare, and social welfare.
           </p>
           <Link to="/about" className="btn btn-active bg-blue-700 text-white hover:bg-blue-600 hover:scale-105 transition anim-left">
-            <button>Read More</button>
+            <button>Read More </button><FiChevronRight className="text-xl" />
           </Link>
         </div>
 

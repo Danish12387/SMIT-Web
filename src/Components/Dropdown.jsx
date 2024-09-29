@@ -7,6 +7,9 @@ import {
     FiPieChart,
 } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { useSelector } from "react-redux";
 
 const ShiftingDropDown = () => {
     return (
@@ -160,14 +163,25 @@ const Nub = ({ selected }) => {
 };
 
 const Courses = () => {
+    const { courses } = useSelector(state => state.courses);
+
     return (
         <div>
-            <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">Web Development</button>
-            <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">Graphic Designing</button>
-            <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">Phython Course</button>
-            <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">Java Programming</button>
-            <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">Generative AI</button>
-            <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">App Development</button>
+            {
+                courses?.length > 0 ? (
+                    courses?.map((item, index) => {
+                        return (
+                            <>
+                                <a href={`/apply/${item.id}`} key={index}>
+                                    <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">{item.title}</button>
+                                </a>
+                            </>
+                        )
+                    })
+                )
+                :
+                <div className="text-center text-black">No Results</div>
+            }
         </div>
     );
 };
@@ -175,9 +189,13 @@ const Courses = () => {
 const QuickLinks = () => {
     return (
         <div>
-            <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">Saylani Website</button>
-            <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">SMIT Website</button>
-        </div>
+            <Link to="https://www.saylaniwelfare.com/en" target="_blank">
+                <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">Saylani Website</button>
+            </Link>
+            <Link to="https://student.saylaniwelfare.com/dashboard" target="_blank">
+                <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">SMIT Website</button>
+            </Link>
+        </div >
     );
 };
 
