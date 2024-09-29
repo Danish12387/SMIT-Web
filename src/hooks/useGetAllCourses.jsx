@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react"
 import { useDispatch } from "react-redux";
-import { setCourse } from "../redux/courseSlice";
+import { setCourse, setLoading } from "../redux/courseSlice";
 
 const useGetAllCourses = () => {
     const dispatch = useDispatch();
@@ -13,6 +13,8 @@ const useGetAllCourses = () => {
                 dispatch(setCourse(res.data));
             } catch (error) {
                 console.log(error.message);
+            } finally {
+                dispatch(setLoading());
             }
         }
 
