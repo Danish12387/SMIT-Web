@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 <div className="flex items-center space-x-2">
                     {/* <FaMapMarkerAlt className="text-red-500 text-2xl" /> */}
-                    <p className="text-md">
+                    <p className="md:text-[16px] sm:text-[14px] text-[12px] mx-2">
                         Head Office: 1234 Main Street, Suite 100, City, Country
                     </p>
                 </div>

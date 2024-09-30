@@ -38,7 +38,7 @@ const Tabs = () => {
     return (
         <div
             onMouseLeave={() => handleSetSelected(null)}
-            className="relative flex h-fit gap-2"
+            className="relative flex h-fit gap-2 lg:flex-row text-sm lg:text-[16px] w-full items-center flex-col"
         >
             {TABS.map((t) => {
                 return (
@@ -66,7 +66,7 @@ const Tab = ({ children, tab, handleSetSelected, selected }) => {
             id={`shift-tab-${tab}`}
             onMouseEnter={() => handleSetSelected(tab)}
             onClick={() => handleSetSelected(tab)}
-            className={`flex items-center gap-1 rounded-full px-3 py-1.5 text-md transition-colors ${selected === tab
+            className={`flex items-center gap-1 rounded-full py-1.5 w-full justify-center md:px-3 text-md transition-colors ${selected === tab
                 ? " bg-blue-600 text-neutral-100"
                 : "text-black"
                 }`}
@@ -172,15 +172,15 @@ const Courses = () => {
                     courses?.map((item, index) => {
                         return (
                             <>
-                                <a href={`/apply/${item.id}`} key={index}>
+                                <Link to={`/apply/${item.id}`} key={index} onClick={() => window.reload()}>
                                     <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">{item.title}</button>
-                                </a>
+                                </Link>
                             </>
                         )
                     })
                 )
-                :
-                <div className="text-center text-black">No Results</div>
+                    :
+                    <div className="text-center text-black">No Results</div>
             }
         </div>
     );
@@ -205,7 +205,7 @@ const TABS = [
         Component: Courses,
     },
     {
-        title: "Quick Links",
+        title: "Links",
         Component: QuickLinks,
     },
 ].map((n, idx) => ({ ...n, id: idx + 1 }));

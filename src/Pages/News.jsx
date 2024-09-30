@@ -69,7 +69,7 @@ const News = () => {
           </div>
         </div>
         <div className="navbar-center">
-          <a className="font-semibold text-2xl anim-top text-blue-600">Campuses in <span className='text-green-600'>{selectCity}</span></a>
+          <a className="font-semibold md:text-2xl text-[18px] anim-top text-blue-600">Campuses in <span className='text-green-600'>{selectCity}</span></a>
         </div>
         <div className="navbar-end">
 
@@ -79,7 +79,7 @@ const News = () => {
         filterCity.map((data) => (
           <div
             key={data.id}
-            className="card mx-10 my-10 lg:flex-row-reverse bg-base-500 shadow-xl transform transition-all duration-300 hover:scale-[1.01] anim-bottom p-4"
+            className="card mx-5 sm:mx-10 my-10 lg:flex-row-reverse bg-base-500 shadow-xl transform transition-all duration-300 hover:scale-[1.01] anim-bottom p-4 overflow-hidden"
           >
             <figure className="w-full md:w-1/3 h-auto md:h-full">
               <img
@@ -91,7 +91,7 @@ const News = () => {
             <div className="card-body flex flex-col ">
               <h2 className="card-title text-3xl font-semibold text-blue-600">{data.name}</h2>
               <h3 className="font-semibold"><span className='text-green-600'>Address:</span> {data.address}</h3>
-              <h3 className="font-semibold"><span className='text-green-600'>Map:</span> {data.mapUrl}</h3>
+              <h3 className="font-semibold"><span className='text-green-600 text-wrap'>Map:</span> {data.mapUrl}</h3>
             </div>
           </div>
         ))}

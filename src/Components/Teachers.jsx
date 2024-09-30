@@ -14,7 +14,33 @@ const Teachers = () => {
         speed: 2000,
         autoplaySpeed: 3000,
         centerPadding: "60px",
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 650,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
     const Courses = [
@@ -36,13 +62,13 @@ const Teachers = () => {
         <div className="my-20">
             <h1 className='text-center text-[40px] font-semibold text-blue-600'>Our <span className='text-green-600'>Teachers</span></h1>
 
-            <div className="my-20 w-full mx-auto px-10">
+            <div className="my-20 w-[90%] sm:w-full mx-auto px-5 sm:px-10">
                 <Slider {...settings}>
                     {
                         Courses.map((item, index) => {
                             return (
                                 <div key={index} className="flex justify-center">
-                                    <div className="card bg-base-100 shadow-xl border cursor-pointer w-[330px] h-96">
+                                    <div className="card bg-base-100 shadow-xl border cursor-pointer w-full md:w-[350px] h-96">
                                         <figure className="h-[70%]">
                                             <img
                                                 src={item.image}
@@ -50,7 +76,7 @@ const Teachers = () => {
                                         </figure>
                                         <div className="card-body">
                                             <h2 className="card-title">{item.title}</h2>
-                                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, iste.</p>
                                         </div>
                                     </div>
                                 </div>
