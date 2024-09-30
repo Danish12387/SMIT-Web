@@ -12,7 +12,7 @@ function ImageSlider() {
         navigation={true}
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 3000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         modules={[Navigation, Pagination, Autoplay]}

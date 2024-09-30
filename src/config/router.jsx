@@ -6,6 +6,7 @@ import Loading from '../Components/Loading';
 const Home = lazy(() => import('../Pages/Home'));
 const About = lazy(() => import('../Pages/About'));
 const Courses = lazy(() => import('../Pages/Courses'));
+const Campuses = lazy(() => import('../Pages/News'));
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
             {
                 path: "/apply/:id",
                 element: <Courses />,
+            },
+            {
+                path: "/campuses",
+                element: <Campuses />,
             },
         ]
     },

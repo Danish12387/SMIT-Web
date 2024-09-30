@@ -13,6 +13,7 @@ const useScrollReveal = () => {
 
     sr.reveal('.anim-left', { origin: 'left' });
     sr.reveal('.anim-bottom', { origin: 'bottom' });
+    sr.reveal('.anim-top', { origin: 'top' });
 
   }, []);
 };

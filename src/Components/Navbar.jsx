@@ -13,6 +13,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <Link to="/" className="rounded-full hover:bg-blue-600 py-1 px-4 transition duration-300 hover:text-white mx-2 text-md text-black">Home</Link>
           <Link to="/about" className="rounded-full hover:bg-blue-600 py-1 px-4 transition duration-300 hover:text-white mx-2 text-md text-black">About</Link>
+          <Link to="/campuses" className="rounded-full hover:bg-blue-600 py-1 px-4 transition duration-300 hover:text-white mx-2 text-md text-black">Campuses</Link>
           <ShiftingDropDown />
           <Link to="#" className="rounded-full hover:bg-blue-600 py-1 px-4 transition duration-300 hover:text-white mx-2 text-md text-black">Contact</Link>
         </div>
