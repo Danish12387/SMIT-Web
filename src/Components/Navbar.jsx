@@ -65,7 +65,7 @@ const Navbar = () => {
           </Link>
           <ShiftingDropDown />
           <Link
-            to="/contact"
+            to="#contact"
             className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white text-black"
           >
             Contact
@@ -109,14 +109,14 @@ const Navbar = () => {
           </Link>
           <ShiftingDropDown />
           <Link
-            to="/contact"
+            to="#"
             className="rounded-full hover:bg-blue-600 py-2 w-full text-center transition duration-300 hover:text-white text-black text-sm"
             onClick={toggleMenu}
           >
             Contact
           </Link>
           <Link
-            to="#"
+            to="#contact"
             className="btn btn-active bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition text-[12px] md:text-[13px]"
             onClick={toggleMenu}
           >
