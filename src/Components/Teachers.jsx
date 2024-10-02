@@ -13,7 +13,7 @@ const Teachers = () => {
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 3000,
-        centerPadding: "60px",
+        // centerPadding: "60px",
         arrows: false,
         responsive: [
             {
@@ -59,7 +59,7 @@ const Teachers = () => {
     ]
 
     return (
-        <div className="my-20">
+        <div className="my-20 container mx-auto">
             <h1 className='text-center text-[40px] font-semibold text-blue-600 anim-zoom'>Our <span className='text-green-600'>Teachers</span></h1>
 
             <div className="my-20 w-[90%] sm:w-full mx-auto px-5 sm:px-10">
@@ -68,7 +68,7 @@ const Teachers = () => {
                         Courses.map((item, index) => {
                             return (
                                 <div key={index} className="flex justify-center" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="1500" data-aos-once="true">
-                                    <div className="card bg-base-100 shadow-xl border cursor-pointer w-full md:w-[350px] h-96">
+                                    <div className="card bg-base-100 shadow-xl border cursor-pointer mx-1 sm:mx-2 md:mx-5 h-96">
                                         <figure className="h-[70%]">
                                             <img
                                                 src={item.image}
