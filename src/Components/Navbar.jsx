@@ -75,7 +75,7 @@ const Navbar = () => {
         {/* Navbar End */}
         <div className="navbar-end hidden lg:flex">
           <Link
-            to="#"
+            to="https://forms.saylaniwelfare.com/en" target="_blank"
             className="btn btn-active bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition text-[12px] md:text-[13px]"
           >
             Apply Now
@@ -115,7 +115,7 @@ const Navbar = () => {
             Contact
           </Link>
           <Link
-            to="#contact"
+            to="https://forms.saylaniwelfare.com/en" target="_blank"
             className="btn btn-active bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition text-[12px] md:text-[13px]"
             onClick={toggleMenu}
           >

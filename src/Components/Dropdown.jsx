@@ -10,6 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import useGetAllCourses from "../hooks/useGetAllCourses";
 
 const ShiftingDropDown = () => {
     return (
@@ -178,7 +179,7 @@ const Courses = () => {
                             courses?.length > 0 ? (
                                 courses?.map((item, index) => {
                                     return (
-                                        <Link to={`/apply/${item.id}`} key={index} onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                                        <Link to={`/apply/${item.id}`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
                                             {item.title} <FiArrowRight />
                                         </Link>
                                     )
