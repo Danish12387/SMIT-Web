@@ -81,7 +81,6 @@ const Tab = ({ children, tab, handleSetSelected, selected }) => {
 };
 
 const Content = ({ selected, dir }) => {
-    console.log(selected, dir)
     return (
         <motion.div
             id="overlay-content"
@@ -171,24 +170,61 @@ const Courses = () => {
 
     return (
         <div>
-            {
-                courses?.length > 0 ? (
-                    courses?.map((item, index) => {
-                        return (
-                            <>
-                                <Link to={`/apply/${item.id}`} key={index} >
-                                    <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">{item.title}</button>
-                                </Link>
-                            </>
-                        )
-                    })
-                )
-                    :
-                    <div className="text-center text-black">No Results</div>
-            }
-        </div>
+            <div className="md:w-[600px] sm:w-[400px] w-[340px]">
+                <div className="flex gap-4">
+                    <div>
+                        <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">Technology</h3>
+                        {
+                            courses?.length > 0 ? (
+                                courses?.map((item, index) => {
+                                    return (
+                                        <Link to={`/apply/${item.id}`} key={index} onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                                            {item.title} <FiArrowRight />
+                                        </Link>
+                                    )
+                                })
+                            )
+                                : <>No Results</>
+                        }
+                    </div>
+                    <div>
+                        <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">Medical</h3>
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                            Bachelor of Medicine<FiArrowRight />
+                        </Link>
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                            Bachelor of Dental Surgery<FiArrowRight />
+                        </Link>
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                            Bachelor of Pharmacy<FiArrowRight />
+                        </Link>
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                            B.Sc Nursing<FiArrowRight />
+                        </Link>
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                            BHMS <FiArrowRight />
+                        </Link>
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                            Doctor of Medicine  <FiArrowRight />
+                        </Link>
+                    </div>
+                    <div>
+                        <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">Repairing</h3>
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                            Mobile Repairing<FiArrowRight />
+                        </Link>
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                            Car Repairing<FiArrowRight />
+                        </Link>
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                            Plane Repairing<FiArrowRight />
+                        </Link>
+                    </div>
+                </div>
+            </div >
+        </div >
     );
-};
+}
 
 const QuickLinks = () => {
     return (
@@ -197,7 +233,7 @@ const QuickLinks = () => {
                 <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">Saylani Website</button>
             </Link>
             <Link to="https://student.saylaniwelfare.com/dashboard" target="_blank">
-                <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">Student Portal</button>
+                <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">Student Portal </button>
             </Link>
         </div >
     );
