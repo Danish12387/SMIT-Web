@@ -176,7 +176,7 @@ const Courses = () => {
                     courses?.map((item, index) => {
                         return (
                             <>
-                                <Link to={`/apply/about`} key={index} >
+                                <Link to={`/apply/${item.id}`} key={index} >
                                     <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">{item.title}</button>
                                 </Link>
                             </>
