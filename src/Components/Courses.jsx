@@ -7,13 +7,13 @@ function Courses() {
 
     return (
         <div className='my-20'>
-            <h1 className='text-center text-[40px] font-semibold text-blue-600'>Our <span className='text-green-600'>Courses</span></h1>
+            <h1 className='text-center text-[40px] font-semibold text-blue-600 anim-zoom'>Our <span className='text-green-600'>Courses</span></h1>
             <div className='flex flex-wrap gap-10 justify-center my-10'>
                 {
                     courses?.map((item, index) => {
                         return (
                             <div className='hover:scale-105 transition duration-1000 delay-200'>
-                                <div key={index} className="card p-5 bg-base-100 sm:w-96 w-[90%] min-w-72 mx-auto shadow-xl cursor-pointer anim-bottom">
+                                <div key={index} className="card p-5 bg-base-100 sm:w-96 w-[90%] min-w-72 mx-auto shadow-xl cursor-pointer anim-bottom h-96">
                                     <figure>
                                         <img
                                             src="/Courses.png"

@@ -83,7 +83,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu (conditionally rendered) */}
       {isOpen && (
         <div className="lg:hidden flex flex-col items-center space-y-2 mt-4 p-4">
           <Link

@@ -6,7 +6,7 @@ import Loading from '../Components/Loading';
 const Home = lazy(() => import('../Pages/Home'));
 const About = lazy(() => import('../Pages/About'));
 const Courses = lazy(() => import('../Pages/Courses'));
-const Campuses = lazy(() => import('../Pages/News'));
+const Campuses = lazy(() => import('../Pages/Campuses'));
 
 const router = createBrowserRouter([
     {

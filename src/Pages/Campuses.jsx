@@ -69,7 +69,7 @@ const News = () => {
           </div>
         </div>
         <div className="navbar-center">
-          <a className="font-semibold md:text-2xl text-[18px] anim-top text-blue-600">Campuses in <span className='text-green-600'>{selectCity}</span></a>
+          <a className="font-semibold md:text-2xl text-[18px] anim-zoom text-blue-600">Campuses in <span className='text-green-600'>{selectCity}</span></a>
         </div>
         <div className="navbar-end">
 
@@ -79,7 +79,7 @@ const News = () => {
         filterCity.map((data) => (
           <div
             key={data.id}
-            className="card mx-5 sm:mx-10 my-10 lg:flex-row-reverse bg-base-500 shadow-xl transform transition-all duration-300 hover:scale-[1.01] anim-bottom p-4 overflow-hidden"
+            className="card mx-5 sm:mx-10 my-10 lg:flex-row-reverse bg-base-500 shadow-xl transform transition-all duration-300 hover:scale-[1.01] anim-zoom p-4 overflow-hidden"
           >
             <figure className="w-full md:w-1/3 h-auto md:h-full">
               <img

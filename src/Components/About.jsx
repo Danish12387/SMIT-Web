@@ -17,7 +17,7 @@ const About = () => {
           </Link>
         </div>
 
-        <div className="md:w-[50%] my-5">
+        <div className="md:w-[50%] my-5 anim-zoom">
           <img
             src="/smit-logo-2.png"
             alt="Saylani Welfare"

@@ -18,7 +18,7 @@ const ChairmanAbout = () => {
                     </Link>
                 </div>
 
-                <div className="md:w-[50%] my-5">
+                <div className="md:w-[50%] my-5 anim-zoom">
                     <img
                         src="/Chairman.jpg"
                         alt="Saylani Welfare"
