@@ -6,7 +6,11 @@ import { useSelector } from 'react-redux';
 import Loading from './Components/Loading';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-AOS.init();
+AOS.init({
+  duration: 1000,
+  once: true,
+  easing: 'ease-out',
+});
 
 function App() {
   const { loading } = useSelector(state => state.courses);

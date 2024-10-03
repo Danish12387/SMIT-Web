@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import ShiftingDropDown from "./Dropdown";
 import { Link } from "react-router-dom";
+import ThemeController from "./ThemeController";
 
 const Navbar = () => {
-  // State to track the mobile menu
   const [isOpen, setIsOpen] = useState(false);
 
-  // Toggle the mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -14,18 +13,18 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar bg-base-100 sticky top-0 z-50 shadow-md px-6 md:px-10 h-16 md:h-20">
-        {/* Navbar Start */}
-        <Link to="/" className="navbar-start">
-          <img
-            className="h-10 md:h-12 cursor-pointer"
-            src="/smit-logo.png"
-            alt="SMIT-logo"
-          />
-        </Link>
+        <div className="navbar-start">
+          <Link to="/">
+            <img
+              className="h-10 md:h-12 cursor-pointer"
+              src="/smit-logo.png"
+              alt="SMIT-logo"
+            />
+          </Link>
+        </div>
 
-        {/* Mobile Menu Button */}
         <div className="lg:hidden navbar-end">
-          <button className="btn btn-square btn-ghost" onClick={toggleMenu}>
+          <button className="btn btn-square" onClick={toggleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -43,7 +42,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Navbar Center */}
         <div className={`navbar-center lg:flex hidden lg:space-x-2`}>
           <Link
             to="/"
@@ -57,12 +55,12 @@ const Navbar = () => {
           >
             About
           </Link>
-          <Link
+          {/* <Link
             to="/campuses"
             className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white text-black"
           >
             Campuses
-          </Link>
+          </Link> */}
           <ShiftingDropDown />
           <Link
             to="#contact"
@@ -81,10 +79,11 @@ const Navbar = () => {
             Apply Now
           </Link>
         </div>
+        <ThemeController />
       </div>
 
       {isOpen && (
-        <div className="lg:hidden flex flex-col items-center space-y-2 mt-4 p-4">
+        <div className="lg:hidden flex flex-col items-center justify-center space-y-2 mt-4 p-4">
           <Link
             to="/"
             className="rounded-full hover:bg-blue-600 py-2 w-full text-center transition duration-300 hover:text-white text-black text-sm"
@@ -99,13 +98,13 @@ const Navbar = () => {
           >
             About
           </Link>
-          <Link
+          {/* <Link
             to="/campuses"
             className="rounded-full hover:bg-blue-600 py-2 w-full text-center transition duration-300 hover:text-white text-black text-sm"
             onClick={toggleMenu}
           >
             Campuses
-          </Link>
+          </Link> */}
           <ShiftingDropDown />
           <Link
             to="#"

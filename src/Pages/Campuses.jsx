@@ -79,8 +79,8 @@ const News = () => {
         filterCity.map((data) => (
           <div
             key={data.id}
-            className="card mx-5 sm:mx-10 my-10 lg:flex-row-reverse bg-base-500 shadow-xl transform transition-all duration-300 hover:scale-[1.01] anim-zoom p-4 overflow-hidden"
-          >
+            className="card mx-5 sm:mx-10 my-10 lg:flex-row-reverse bg-base-500 shadow-xl transform transition-all duration-300 hover:scale-[1.01] p-4 overflow-hidden"
+            data-aos="fade-up">
             <figure className="w-full md:w-1/3 h-auto md:h-full">
               <img
                 className="object-cover h-56 rounded-lg"
@@ -97,7 +97,6 @@ const News = () => {
         ))}
     </div>
   );
-
 };
 
 export default News;
