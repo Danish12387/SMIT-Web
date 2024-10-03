@@ -43,18 +43,23 @@ const Teachers = () => {
         ]
     };
 
-    const Courses = [
+    const CourseTeachers = [
         {
             image: "/Instructors1.jpeg",
-            title: "Sir Kamran"
+            title: "Sir Kamran",
+            description:"Sr. Web Developer at Folio3"
         },
         {
             image: "/Instructors2.jpeg",
-            title: "Sir Bilal"
+            title: "Sir Bilal",
+            description:"Sr. Web Developer at Folio3"
+
         },
         {
             image: "/Instructors3.jpeg",
-            title: "Sir Ghous"
+            title: "Sir Ghous",
+            description:"Sr. Web Developer at Folio3"
+
         },
     ]
 
@@ -65,7 +70,7 @@ const Teachers = () => {
             <div className="my-20 w-[90%] sm:w-full mx-auto px-5 sm:px-10">
                 <Slider {...settings}>
                     {
-                        Courses.map((item, index) => {
+                        CourseTeachers.map((item, index) => {
                             return (
                                 <div key={index} className="flex justify-center" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="1500" data-aos-once="true">
                                     <div className="card bg-base-100 shadow-xl border cursor-pointer mx-1 sm:mx-2 md:mx-5 h-96">
