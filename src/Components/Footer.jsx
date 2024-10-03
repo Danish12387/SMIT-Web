@@ -1,24 +1,36 @@
-import React from 'react';
-// import { FaMapMarkerAlt } from 'react-icons/fa';
+import React from 'react'
+import SMITLogo from "../assets/smit.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-blue-600 text-white py-5 mt-4">
-            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-                <div className="flex items-center space-x-2">
-                    {/* <FaMapMarkerAlt className="text-red-500 text-2xl" /> */}
-                    <p className="md:text-[16px] sm:text-[14px] text-[12px] mx-2">
-                        Head Office: 1234 Main Street, Suite 100, City, Country
-                    </p>
-                </div>
-                <div className="mt-4 md:mt-0">
-                    <p className="text-sm">
-                        © 2024 Saylani. All rights reserved.
-                    </p>
-                </div>
-            </div>
-        </footer>
-    );
-};
+        <footer className="footer bg-base-200 text-base-content p-10">
+            <aside>
+                <img src="/smit-logo.png" alt="SMIT Logo" className="h-32" />
+                <p className="text-center">Copyright © {new Date().getFullYear()} - All rights reserved by <b>SMIT</b></p>
 
-export default Footer;
+            </aside>
+            <nav>
+                <h6 className="footer-title">Services</h6>
+                <a className="link link-hover">Branding</a>
+                <a className="link link-hover">Design</a>
+                <a className="link link-hover">Marketing</a>
+                <a className="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+                <h6 className="footer-title">Company</h6>
+                <a className="link link-hover">About us</a>
+                <a className="link link-hover">Contact</a>
+                <a className="link link-hover">Jobs</a>
+                <a className="link link-hover">Press kit</a>
+            </nav>
+            <nav>
+                <h6 className="footer-title">Legal</h6>
+                <a className="link link-hover">Terms of use</a>
+                <a className="link link-hover">Privacy policy</a>
+                <a className="link link-hover">Cookie policy</a>
+            </nav>
+        </footer>
+    )
+}
+
+export default Footer

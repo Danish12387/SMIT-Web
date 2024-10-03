@@ -7,6 +7,7 @@ import Teachers from '../Components/Teachers';
 import News from '../Components/News';
 import useScrollReveal from '../ScrollReveal/useScrollReveal';
 import Contact from '../Components/Contact';
+import TeacherCard from '../Components/NewTeachers';
 
 function Home() {
     useScrollReveal();

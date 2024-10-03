@@ -58,12 +58,12 @@ function Courses() {
 
             <div className="flex justify-between  flex-row-reverse">
               <Link to="https://forms.saylaniwelfare.com/en" target="_blank">
-                <button className='btn btn-active px-[40px] bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition text-[12px] md:text-[13px]'>Enroll Now</button>
+                <button className='btn btn-active px-[40px] bg-green text-white hover:bg-hoverGreen hover:scale-105 transition text-[12px] md:text-[13px]'>Enroll Now</button>
               </Link>
               <div>
 
-                <h1 className="text-3xl card-title font-bold text-blue-600">{Course.title.slice(0, Course.title.indexOf(' '))} <span className='text-green-600'>{Course.title.slice(Course.title.indexOf(' '))}</span></h1>
-                <div className="mt-2 badge border-green-600 text-blue-600">
+                <h1 className="text-3xl card-title font-bold text-blue-600">{Course.title.slice(0, Course.title.indexOf(' '))} <span className='text-green'>{Course.title.slice(Course.title.indexOf(' '))}</span></h1>
+                <div className="mt-2 badge border-green text-blue-600">
                   {Course.duration}
                 </div>
               </div>
@@ -73,13 +73,13 @@ function Courses() {
             <div className='card'>
               <div className="space-y-4 card-body">
                 <div>
-                  <h2 className="text-xl font-semibold mb-2  text-blue-600">Course <span className='text-green-600'>Description</span> </h2>
+                  <h2 className="text-xl font-semibold mb-2  text-blue-600">Course <span className='text-green'>Description</span> </h2>
                   <p className="text-muted-foreground">
                     {Course.description}
                   </p>
                 </div>
                 <div>
-                  <h2 className="text-xl font-semibold mb-2 text-blue-600">Key <span className='text-green-600'>Topics</span></h2>
+                  <h2 className="text-xl font-semibold mb-2 text-blue-600">Key <span className='text-green'>Topics</span></h2>
                   <ul className="list-disc  list-inside text-muted-foreground">
                     {skills.map((skill) => {
                       return <li key={skill}>{skill}</li>
@@ -87,12 +87,11 @@ function Courses() {
                   </ul>
                 </div>
                 <div>
-                  <h2 className="text-xl font-semibold mb-3  text-blue-600">Available <span className='text-green-600'>Campuses</span> </h2>
+                  <h2 className="text-xl font-semibold mb-3  text-blue-600">Available <span className='text-green'>Campuses</span> </h2>
 
                   <div className="grid grid-cols-2 gap-2">
                     {campuses.map((campus) => {
-                      return <Link to={`/campuses/${campus.id}`} className="badge badge-outline hover:scale-110 border-green-600 text-blue-600 font-semibold p-2.5" key={campus.id}>{campus.name}</Link>
-
+                      return <Link to={`/campuses/${campus.id}`} className="badge badge-outline hover:scale-110 border-green text-blue-600 font-semibold p-2.5" key={campus.id}>{campus.name}</Link>
                     })}
                   </div>
                 </div>

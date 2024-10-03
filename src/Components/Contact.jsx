@@ -2,8 +2,8 @@ import React from 'react';
 
 function Contact() {
   return (
-    <div className="min-h-screen max-h-[900px] flex items-center justify-center">
-      <div className=" p-8 rounded-lg shadow-lg w-full max-w-xl">
+    <div className="min-h-screen max-h-[900px] flex items-center justify-center" id="contact">
+      <div className=" p-8 rounded-lg w-full max-w-xl">
         <h1 className='text-center text-[40px] font-semibold text-blue-600 anim-zoom'>Contact <span className='text-green'>Us</span></h1>
         <form className='mt-10'>
           <div className="mb-4 anim-zoom">
@@ -41,7 +41,7 @@ function Contact() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-blue-500 text-white hover:scale-105 transition py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 anim-zoom"
+              className="bg-green text-white hover:scale-105 transition py-2 px-4 rounded-lg hover:bg-hoverGreen focus:outline-none focus:ring-2 focus:ring-green focus:ring-opacity-50 anim-zoom text-sm w-52 shadow-lg duration-300"
             >
               Send Message
             </button>

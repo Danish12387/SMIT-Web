@@ -9,7 +9,7 @@ export function Avatar({ image, alt }) {
       </div>
     );
   }
-  
+
   export function AvatarFallback({ initials }) {
     return (
       <div className="avatar placeholder">
@@ -47,7 +47,7 @@ export default function ResponsiveSingleCampusPage() {
         <div className="card-body space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
             <h2 className="card-title text-2xl sm:text-3xl font-bold mb-2 sm:mb-0">{campus.name}</h2>
-            <div className="badge badge-outline border-green-600 text-blue-600 text-sm self-start sm:self-auto">
+            <div className="badge badge-outline border-green text-blue-600 text-sm self-start sm:self-auto">
               Karachi Campus
             </div>
           </div>

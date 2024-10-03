@@ -62,15 +62,14 @@ const Navbar = () => {
             Campuses
           </Link> */}
           <ShiftingDropDown />
-          <Link
-            to="#contact"
+          <a
+            href="#contact"
             className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white"
           >
             Contact
-          </Link>
+          </a>
         </div>
 
-        {/* Navbar End */}
         <div className="navbar-end hidden lg:flex">
           <Link
             to="https://forms.saylaniwelfare.com/en" target="_blank"

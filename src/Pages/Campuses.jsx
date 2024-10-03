@@ -69,7 +69,7 @@ const News = () => {
           </div>
         </div>
         <div className="navbar-center">
-          <a className="font-semibold md:text-2xl text-[18px] anim-zoom text-blue-600">Campuses in <span className='text-green-600'>{selectCity}</span></a>
+          <a className="font-semibold md:text-2xl text-[18px] anim-zoom text-blue-600">Campuses in <span className='text-green'>{selectCity}</span></a>
         </div>
         <div className="navbar-end">
 
@@ -90,8 +90,8 @@ const News = () => {
             </figure>
             <div className="card-body flex flex-col ">
               <h2 className="card-title text-3xl font-semibold text-blue-600">{data.name}</h2>
-              <h3 className="font-semibold"><span className='text-green-600'>Address:</span> {data.address}</h3>
-              <h3 className="font-semibold"><span className='text-green-600 text-wrap'>Map:</span> {data.mapUrl}</h3>
+              <h3 className="font-semibold"><span className='text-green'>Address:</span> {data.address}</h3>
+              <h3 className="font-semibold"><span className='text-green text-wrap'>Map:</span> {data.mapUrl}</h3>
             </div>
           </div>
         ))}
