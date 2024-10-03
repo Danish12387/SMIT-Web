@@ -58,7 +58,8 @@ function Courses() {
       
         <div className="flex justify-between  flex-row-reverse">
        <Link to="https://forms.saylaniwelfare.com/en" target="_blank">
-       <button className='btn btn-active px-[40px] bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition text-[12px] md:text-[13px]'>Enroll Now</button>
+       <img className='w-36 hover:scale-110 transition' src="" alt="" />
+       {/* <button className='btn btn-active px-[40px] bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition text-[12px] md:text-[13px]'>Enroll Now</button> */}
        </Link>
        <div>
 
