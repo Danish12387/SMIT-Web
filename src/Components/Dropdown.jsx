@@ -161,7 +161,7 @@ const Nub = ({ selected }) => {
             }}
             animate={{ left }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-400"
+            className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-400 md:block hidden"
         />
     );
 };
@@ -179,7 +179,7 @@ const Courses = () => {
                             courses?.length > 0 ? (
                                 courses?.map((item, index) => {
                                     return (
-                                        <Link to={`/apply/${item.id}`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                                        <Link to={`/apply/${item.id}`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                                             {item.title} <FiArrowRight />
                                         </Link>
                                     )
@@ -190,34 +190,34 @@ const Courses = () => {
                     </div>
                     <div>
                         <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">Medical</h3>
-                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                             Bachelor of Medicine<FiArrowRight />
                         </Link>
-                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                             Bachelor of Dental Surgery<FiArrowRight />
                         </Link>
-                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                             Bachelor of Pharmacy<FiArrowRight />
                         </Link>
-                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                             B.Sc Nursing<FiArrowRight />
                         </Link>
-                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                             BHMS <FiArrowRight />
                         </Link>
-                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                             Doctor of Medicine  <FiArrowRight />
                         </Link>
                     </div>
                     <div>
                         <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">Repairing</h3>
-                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                             Mobile Repairing<FiArrowRight />
                         </Link>
-                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                             Car Repairing<FiArrowRight />
                         </Link>
-                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                        <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                             Plane Repairing<FiArrowRight />
                         </Link>
                     </div>
@@ -256,7 +256,7 @@ const Campuses = () => {
                     <div>
                         <div className="my-2 hover:bg-gray-100 p-2 rounded cursor-pointer">
                             <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">IT Park</h3>
-                            <h4 className="text-green-600 text-[12px] md:text-[14px] font-medium">Zaitoon Ashraf IT Park</h4>
+                            <h4 className="text-green text-[12px] md:text-[14px] font-medium">Zaitoon Ashraf IT Park</h4>
                         </div>
                         <img src="/IT-Park.png" alt="IT Park" className="w-60 rounded-lg" />
                     </div>
@@ -267,7 +267,7 @@ const Campuses = () => {
                             karachiCampuses?.length > 0 ? (
                                 karachiCampuses?.map((item, index) => {
                                     return (
-                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                                             {item.name} <FiArrowRight />
                                         </Link>
                                     )
@@ -282,7 +282,7 @@ const Campuses = () => {
                             lahoreCampuses?.length > 0 ? (
                                 lahoreCampuses?.map((item, index) => {
                                     return (
-                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                                             {item.name} <FiArrowRight />
                                         </Link>
                                     )
@@ -297,7 +297,7 @@ const Campuses = () => {
                             islamabadCampuses?.length > 0 ? (
                                 islamabadCampuses?.map((item, index) => {
                                     return (
-                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
                                             {item.name} <FiArrowRight />
                                         </Link>
                                     )
