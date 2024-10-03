@@ -267,7 +267,7 @@ const Campuses = () => {
                             karachiCampuses?.length > 0 ? (
                                 karachiCampuses?.map((item, index) => {
                                     return (
-                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                                        <Link to={`/campuses/${item.id}`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
                                             {item.name} <FiArrowRight />
                                         </Link>
                                     )
