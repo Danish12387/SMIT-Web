@@ -91,7 +91,7 @@ function Courses() {
 
               <div className="grid grid-cols-2 gap-2">
        {campuses.map((campus)=>{
-               return <Link to={`/campus/${campus.id}`} className="badge badge-outline hover:scale-110 border-green-600 text-blue-600 font-semibold p-2.5"key={campus.id}>{campus.name}</Link>
+               return <Link to={`/campuses/${campus.id}`} className="badge badge-outline hover:scale-110 border-green-600 text-blue-600 font-semibold p-2.5"key={campus.id}>{campus.name}</Link>
                
        })}
               </div>
