@@ -47,32 +47,30 @@ const Teachers = () => {
         {
             image: "/Instructors1.jpeg",
             title: "Sir Kamran",
-            description:"Sr. Web Developer at Folio3"
+            description: "Senior Developer at Saylani. Teaches Web Development."
         },
         {
             image: "/Instructors2.jpeg",
             title: "Sir Bilal",
-            description:"Sr. Web Developer at Folio3"
-
+            description: "Full-stack Developer at Saylani. Web Development Instructor."
         },
         {
             image: "/Instructors3.jpeg",
             title: "Sir Ghous",
-            description:"Sr. Web Developer at Folio3"
-
+            description: "Mobile App Developer at Saylani. Focuses on App Development."
         },
     ]
 
     return (
         <div className="my-20 container mx-auto">
-            <h1 className='text-center text-[40px] font-semibold text-blue-600 anim-zoom'>Our <span className='text-green-600'>Teachers</span></h1>
+            <h1 className='text-center text-[40px] font-semibold text-blue-600 anim-zoom'>Our <span className='text-green'>Teachers</span></h1>
 
             <div className="my-20 min-h-[400px] w-[90%] sm:w-full mx-auto px-5 sm:px-10">
                 <Slider {...settings}>
                     {
                         CourseTeachers.map((item, index) => {
                             return (
-                                <div key={index} className="flex justify-center h-[400px]" data-aos="zoom-out">
+                                <div key={index} className="flex justify-center h-[400px]" data-aos="zoom-in">
                                     <div className="card bg-base-100 shadow-xl cursor-pointer mx-1 sm:mx-2 md:mx-5 h-96">
                                         <figure className="h-[70%]">
                                             <img
@@ -81,7 +79,7 @@ const Teachers = () => {
                                         </figure>
                                         <div className="card-body">
                                             <h2 className="card-title">{item.title}</h2>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, iste.</p>
+                                            <p>{item.description}</p>
                                         </div>
                                     </div>
                                 </div>

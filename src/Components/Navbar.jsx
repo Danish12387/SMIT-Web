@@ -45,26 +45,26 @@ const Navbar = () => {
         <div className={`navbar-center lg:flex hidden lg:space-x-2`}>
           <Link
             to="/"
-            className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white text-black"
+            className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white text-black"
+            className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white"
           >
             About
           </Link>
           {/* <Link
             to="/campuses"
-            className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white text-black"
+            className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white"
           >
             Campuses
           </Link> */}
           <ShiftingDropDown />
           <Link
             to="#contact"
-            className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white text-black"
+            className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white"
           >
             Contact
           </Link>
@@ -74,7 +74,7 @@ const Navbar = () => {
         <div className="navbar-end hidden lg:flex">
           <Link
             to="https://forms.saylaniwelfare.com/en" target="_blank"
-            className="btn btn-active bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition text-[12px] md:text-[13px]"
+            className="btn btn-active bg-[#8dc63f] text-white hover:bg-[#80b92f] hover:scale-105 transition text-[12px] md:text-[13px]"
           >
             Apply Now
           </Link>
@@ -86,21 +86,21 @@ const Navbar = () => {
         <div className="lg:hidden flex flex-col items-center justify-center space-y-2 mt-4 p-4">
           <Link
             to="/"
-            className="rounded-full hover:bg-blue-600 py-2 w-full text-center transition duration-300 hover:text-white text-black text-sm"
+            className="rounded-full hover:bg-blue-600 py-2 w-full text-center transition duration-300 hover:text-white text-sm"
             onClick={toggleMenu}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="rounded-full hover:bg-blue-600 py-2 w-full text-center transition duration-300 hover:text-white text-black text-sm"
+            className="rounded-full hover:bg-blue-600 py-2 w-full text-center transition duration-300 hover:text-white text-sm"
             onClick={toggleMenu}
           >
             About
           </Link>
           {/* <Link
             to="/campuses"
-            className="rounded-full hover:bg-blue-600 py-2 w-full text-center transition duration-300 hover:text-white text-black text-sm"
+            className="rounded-full hover:bg-blue-600 py-2 w-full text-center transition duration-300 hover:text-white text-sm"
             onClick={toggleMenu}
           >
             Campuses
@@ -108,14 +108,14 @@ const Navbar = () => {
           <ShiftingDropDown />
           <Link
             to="#"
-            className="rounded-full hover:bg-blue-600 py-2 w-full text-center transition duration-300 hover:text-white text-black text-sm"
+            className="rounded-full hover:bg-blue-600 py-2 w-full text-center transition duration-300 hover:text-white text-sm"
             onClick={toggleMenu}
           >
             Contact
           </Link>
           <Link
             to="https://forms.saylaniwelfare.com/en" target="_blank"
-            className="btn btn-active bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition text-[12px] md:text-[13px]"
+            className="btn btn-active bg-green text-white hover:bg-hoverGreen hover:scale-105 transition text-[12px] md:text-[13px]"
             onClick={toggleMenu}
           >
             Apply Now

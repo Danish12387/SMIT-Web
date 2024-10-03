@@ -20,23 +20,31 @@ function ImageSlider() {
       >
         <SwiperSlide>
           <img
-            src="/Slider-img-1.jpg"
+            src="/slider-image-1.jpg"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             alt="Slide 1"
           />
         </SwiperSlide>
+
         <SwiperSlide>
           <img
-            src="/Slider-img-2.jpg"
+            src="/slider-image-2.jpg"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             alt="Slide 2"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="/Slider-img-3.jpg"
+            src="/slider-image-3.jpg"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             alt="Slide 3"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="/Slider-img-1.jpg"
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            alt="Slide 1"
           />
         </SwiperSlide>
       </Swiper>
