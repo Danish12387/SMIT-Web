@@ -100,7 +100,7 @@ const Content = ({ selected, dir }) => {
                     delay: .25,
                 },
             }}
-            className={`absolute ${selected === 1 ? 'lg:-right-[180px]' : 'lg:left-3'} top-[calc(100%_+_24px)] rounded-lg border border-neutral-200 shadow bg-gradient-to-b from-white via-white to-white p-3`}
+            className={`absolute ${selected === 1 && 'lg:-right-[150px]'} ${selected === 2 && 'lg:-right-[180px]'} ${selected === 3 && 'lg:left-36'} top-[calc(100%_+_24px)] rounded-lg border border-neutral-200 shadow bg-gradient-to-b from-white via-white to-white p-3`}
         >
             <Bridge />
             <Nub selected={selected} />
@@ -161,7 +161,7 @@ const Nub = ({ selected }) => {
             }}
             animate={{ left }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-600"
+            className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-400"
         />
     );
 };
@@ -227,6 +227,91 @@ const Courses = () => {
     );
 }
 
+const Campuses = () => {
+
+    const karachiCampuses = [
+        { id: 1, name: "Saylani Welfare Head Office" },
+        { id: 2, name: "Saylani Mass IT Training Campus" },
+        { id: 3, name: "Gulshan-e-Iqbal Campus" },
+        { id: 4, name: "North Karachi Campus" },
+        { id: 5, name: "Clifton Campus" },
+        { id: 6, name: "Korangi Campus" },
+    ]
+
+    const lahoreCampuses = [
+        { id: 1, name: "Model Town Campus" },
+        { id: 2, name: "Saylani Welfare Lahore Campus" },
+        { id: 3, name: "Johar Town Campus" },
+    ]
+
+    const islamabadCampuses = [
+        { id: 1, name: "Saylani Welfare Islamabad Campus" },
+        { id: 2, name: "Blue Area Campus" },
+    ]
+
+    return (
+        <div>
+            <div className="md:w-[900px] sm:w-[400px] w-[340px]">
+                <div className="flex justify-between gap-4">
+                    <div>
+                        <div className="my-2 hover:bg-gray-100 p-2 rounded cursor-pointer">
+                            <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">IT Park</h3>
+                            <h4 className="text-green-600 text-[12px] md:text-[14px] font-medium">Zaitoon Ashraf IT Park</h4>
+                        </div>
+                        <img src="/IT-Park.png" alt="IT Park" className="w-60 rounded-lg" />
+                    </div>
+                    <hr className="h-64 m-auto border-l border-t-0 border-gray-200 " />
+                    <div>
+                        <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">Karachi</h3>
+                        {
+                            karachiCampuses?.length > 0 ? (
+                                karachiCampuses?.map((item, index) => {
+                                    return (
+                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                                            {item.name} <FiArrowRight />
+                                        </Link>
+                                    )
+                                })
+                            )
+                                : <>No Results</>
+                        }
+                    </div>
+                    <div>
+                        <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">Lahore</h3>
+                        {
+                            lahoreCampuses?.length > 0 ? (
+                                lahoreCampuses?.map((item, index) => {
+                                    return (
+                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                                            {item.name} <FiArrowRight />
+                                        </Link>
+                                    )
+                                })
+                            )
+                                : <>No Results</>
+                        }
+                    </div>
+                    <div>
+                        <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">Islamabad</h3>
+                        {
+                            islamabadCampuses?.length > 0 ? (
+                                islamabadCampuses?.map((item, index) => {
+                                    return (
+                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green-600">
+                                            {item.name} <FiArrowRight />
+                                        </Link>
+                                    )
+                                })
+                            )
+                                : <>No Results</>
+                        }
+                    </div>
+                </div>
+            </div >
+        </div >
+    );
+}
+
 const QuickLinks = () => {
     return (
         <div className="w-[270px]">
@@ -241,6 +326,10 @@ const QuickLinks = () => {
 };
 
 const TABS = [
+    {
+        title: <Link to={"/campuses"}>Campuses</Link>,
+        Component: Campuses,
+    },
     {
         title: "Courses",
         Component: Courses,

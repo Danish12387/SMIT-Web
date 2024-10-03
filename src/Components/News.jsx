@@ -49,7 +49,7 @@ const News = () => {
         <h1 className='text-center text-[40px] font-semibold text-blue-600'>Latest <span className='text-green-600'>News</span></h1>
         <div className="flex flex-wrap justify-center gap-8">
           {videos.map((video) => (
-            <div key={video.id} className="bg-white w-96 p-6 mt-5 rounded-lg shadow-md hover:shadow-lg transition-500 flex flex-col anim-zoom">
+            <div key={video.id} className="w-96 p-6 mt-5 rounded-lg shadow-md hover:shadow-lg transition-500 flex flex-col anim-zoom">
               <iframe
                 width="100%"
                 height="200"

@@ -3,7 +3,7 @@ import React from 'react';
 function Contact() {
   return (
     <div className="min-h-screen max-h-[900px] flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-xl">
+      <div className=" p-8 rounded-lg shadow-lg w-full max-w-xl">
         <h1 className='text-center text-[40px] font-semibold text-blue-600 anim-zoom'>Contact <span className='text-green-600'>Us</span></h1>
         <form className='mt-10'>
           <div className="mb-4 anim-zoom">
