@@ -3,6 +3,7 @@ import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+
 function Courses() {
     const { courses } = useSelector(state => state.courses);
 

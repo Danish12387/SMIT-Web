@@ -43,7 +43,7 @@ const Teachers = () => {
         ]
     };
 
-    const Courses = [
+    const CourseTeachers = [
         {
             image: "/Instructors1.jpeg",
             title: "Sir Kamran",
@@ -68,7 +68,7 @@ const Teachers = () => {
             <div className="my-20 min-h-[400px] w-[90%] sm:w-full mx-auto px-5 sm:px-10">
                 <Slider {...settings}>
                     {
-                        Courses.map((item, index) => {
+                        CourseTeachers.map((item, index) => {
                             return (
                                 <div key={index} className="flex justify-center h-[400px]" data-aos="zoom-in">
                                     <div className="card bg-base-100 shadow-xl cursor-pointer mx-1 sm:mx-2 md:mx-5 h-96">
