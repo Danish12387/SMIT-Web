@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import TeacherCard from '../components/teachersCard'
-
+import TeacherCard from './TeachersCard';   
 
 const teachers = [
     { name: 'Aaron Griffe', designation: 'Math Teacher', imageUrl: 'https://rainbowit.net/html/histudy/assets/images/team/team-01.jpg?height=400&width=300&text=Aaron+Griffe' },
