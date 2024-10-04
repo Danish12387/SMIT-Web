@@ -14,7 +14,7 @@ function Courses() {
                 {
                     courses?.map((item, index) => {
                         return (
-                            <div className='hover:scale-105 transition duration-1000 delay-200'>
+                            <div key={index} className='hover:scale-105 transition duration-1000 delay-200'>
                                 <div key={index} className="card p-5 bg-base-100 sm:w-96 w-[90%] min-w-72 mx-auto shadow-xl cursor-default anim-bottom h-96">
                                     <figure>
                                         <img

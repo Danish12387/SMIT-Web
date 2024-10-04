@@ -38,7 +38,7 @@ const News = () => {
   const filterCity = campuses.filter((campuses) => campuses.city === selectCity)
 
   return (
-    <div className='h-full min-h-screen'>
+    <div className='container mx-auto h-full min-h-screen'>
       <div className="navbar border bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
