@@ -25,6 +25,7 @@ export default ShiftingDropDown;
 const Tabs = () => {
     const [selected, setSelected] = useState(null);
     const [dir, setDir] = useState(null);
+    const [isTrue, setIsTrue] = useState(false);
 
     const handleSetSelected = (val) => {
         if (typeof selected === "number" && typeof val === "number") {
@@ -100,7 +101,7 @@ const Content = ({ selected, dir }) => {
                     delay: .25,
                 },
             }}
-            className={`absolute ${selected === 1 && 'lg:-right-[150px]'} ${selected === 2 && 'lg:-right-[180px]'} ${selected === 3 && 'lg:left-36'} top-[calc(100%_+_24px)] rounded-lg border border-neutral-200 shadow bg-gradient-to-b from-white via-white to-white p-3`}
+            className={`absolute ${selected === 1 && 'lg:-right-[200px] top-[calc(100%_+_-70px)]'} ${selected === 2 && 'lg:-right-[180px] top-[calc(100%_+_-30px)]'} ${selected === 3 && 'lg:left-36 top-[calc(100%_+_0px)]'} lg:top-[calc(100%_+_24px)] rounded-lg border border-neutral-200 shadow bg-gradient-to-b from-white via-white to-white p-3`}
         >
             <Bridge />
             <Nub selected={selected} />
@@ -161,7 +162,7 @@ const Nub = ({ selected }) => {
             }}
             animate={{ left }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-400 md:block hidden"
+            className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-400 lg:block hidden"
         />
     );
 };

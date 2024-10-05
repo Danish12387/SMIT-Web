@@ -46,7 +46,7 @@ export default function ResponsiveSingleCampusPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className=" mb-8">
-        <div className="card-body  space-y-4">
+        <div className="card-body space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
             <h2 className="card-title text-2xl sm:text-3xl font-bold mb-2 sm:mb-0 ">{campus.name.slice(0, campus.name.indexOf(' '))} <span className=''>{campus.name.slice( campus.name.indexOf(' '))}</span></h2>
             <div className="badge badge-outline border-green text-blue-600 text-sm self-start sm:self-auto">

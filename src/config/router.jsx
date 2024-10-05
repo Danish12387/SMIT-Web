@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MainLayout from '../Layout/MainLayout';
 import Loading from '../Components/Loading';
 import SingleCampus from '../Pages/SingleCampus';
+import NotFoundPage from '../Components/NotFoundPage';
 
 const Home = lazy(() => import('../Pages/Home'));
 const About = lazy(() => import('../Pages/About'));
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
             {
                 path: "/apply/:id",
                 element: <Courses />,
-            },  
+            },
             {
                 path: "/campuses/:id",
                 element: <SingleCampus />,
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             },
         ]
     },
+    {
+        path: "*",
+        element: <NotFoundPage />,
+    }
 ]);
 
 const AppRouter = () => {

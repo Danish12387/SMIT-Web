@@ -7,7 +7,11 @@ h1,h2,h3{
 h1 spa, h2 span ,h3 span{
   color:#8dc63f ;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  transition: all .2s ease-in-out;
 }
