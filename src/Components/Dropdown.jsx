@@ -67,9 +67,9 @@ const Tab = ({ children, tab, handleSetSelected, selected }) => {
             id={`shift-tab-${tab}`}
             onMouseEnter={() => handleSetSelected(tab)}
             onClick={() => handleSetSelected(tab)}
-            className={`flex items-center gap-1 rounded-full py-1.5 w-full justify-center md:px-3 text-md transition-colors ${selected === tab
+            className={`flex items-center text-lightText dark:text-darkText  gap-1 rounded-full  py-1.5 w-full justify-center md:px-3 text-md transition-colors ${selected === tab
                 ? " bg-blue-600 text-neutral-100"
-                : "text-black"
+                : ""
                 }`}
         >
             <span>{children}</span>
