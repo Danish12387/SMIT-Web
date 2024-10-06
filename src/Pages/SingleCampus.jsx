@@ -47,7 +47,7 @@ export default function ResponsiveSingleCampusPage() {
     <div className="container mx-auto px-4 py-8">
       <div className=" mb-8">
         <div className="card-body space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap flex-col sm:flex-row sm:items-center sm:justify-between">
             <h2 className="card-title text-2xl sm:text-3xl font-bold mb-2 sm:mb-0 ">{campus.name.slice(0, campus.name.indexOf(' '))} <span className=''>{campus.name.slice( campus.name.indexOf(' '))}</span></h2>
             <div className="badge badge-outline border-green text-blue-600 text-sm self-start sm:self-auto">
               {campus.city} Campus
@@ -55,7 +55,7 @@ export default function ResponsiveSingleCampusPage() {
           </div>
           <div className="flex items-center text-sm text-gray-500">
             <MapPin className="h-4 w-4 mr-2 flex-shrink-0" color="blue" />
-            <Link to={campus.address} className="link link-hover" target="_blank">{campus.address}</Link>
+            <Link to={campus.address} className=" dark:text-white link link-hover" target="_blank">{campus.address}</Link>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">

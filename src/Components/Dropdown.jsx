@@ -325,6 +325,16 @@ const QuickLinks = () => {
         </div >
     );
 };
+const Stories = () => {
+    return (
+        <div className="w-[270px]">
+            <Link to={`/sucess-story/${'sabeeb'}`} >
+                <button className="text-black h-full w-full py-3 transition rounded text-sm hover:bg-gray-100 hover:text-blue-600 my-2">Sucess Stories</button>
+            </Link>
+           
+        </div >
+    );
+};
 
 const TABS = [
     {
@@ -334,6 +344,10 @@ const TABS = [
     {
         title: "Courses",
         Component: Courses,
+    },
+    {
+        title: "Stories",
+        Component: Stories,
     },
     {
         title: "Links",
