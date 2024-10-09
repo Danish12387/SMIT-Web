@@ -93,7 +93,7 @@ const NavbarBar = () => {
           >
             Campuses
           </Link> */}
-          <ShiftingDropDown />
+          <ShiftingDropDown setOpen={setIsOpen} />
           <a
             href="/#contact"
             className="block md:inline-block rounded-full hover:bg-blue-600 py-1 px-3 md:px-4 transition duration-300 hover:text-white"

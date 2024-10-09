@@ -101,7 +101,7 @@ const Content = ({ selected, dir }) => {
                     delay: .25,
                 },
             }}
-            className={`absolute ${selected === 1 && 'lg:-right-[200px] top-[calc(100%_+_-70px)]'} ${selected === 2 && 'lg:-right-[180px] top-[calc(100%_+_-30px)]'} ${selected === 3 && 'lg:left-36 top-[calc(100%_+_0px)]'} lg:top-[calc(100%_+_24px)] rounded-lg border border-neutral-200 shadow bg-gradient-to-b from-white via-white to-white p-3`}
+            className={`absolute ${selected === 1 && 'lg:-right-[200px] top-[calc(100%_+_-200px)] sm:top-[calc(100%_+_-70px)]'} ${selected === 2 && 'lg:-right-[180px] top-[calc(100%_+_-30px)]'} ${selected === 3 && 'lg:left-36 top-[calc(100%_+_0px)]'} lg:top-[calc(100%_+_24px)] rounded-lg border border-neutral-200 shadow bg-gradient-to-b from-white via-white to-white p-3`}
         >
             <Bridge />
             <Nub selected={selected} />
@@ -181,7 +181,7 @@ const Courses = () => {
                                 courses?.map((item, index) => {
                                     return (
                                         <Link to={`/apply/${item.id}`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                                            {item.title} <FiArrowRight />
+                                            {item.title} <FiArrowRight className="hidden lg:block" />
                                         </Link>
                                     )
                                 })
@@ -192,34 +192,34 @@ const Courses = () => {
                     <div>
                         <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">Medical</h3>
                         <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                            Bachelor of Medicine<FiArrowRight />
+                            Bachelor of Medicine<FiArrowRight className="hidden lg:block" />
                         </Link>
                         <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                            Bachelor of Dental Surgery<FiArrowRight />
+                            Bachelor of Dental Surgery<FiArrowRight className="hidden lg:block" />
                         </Link>
                         <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                            Bachelor of Pharmacy<FiArrowRight />
+                            Bachelor of Pharmacy<FiArrowRight className="hidden lg:block" />
                         </Link>
                         <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                            B.Sc Nursing<FiArrowRight />
+                            B.Sc Nursing<FiArrowRight className="hidden lg:block" />
                         </Link>
                         <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                            BHMS <FiArrowRight />
+                            BHMS <FiArrowRight className="hidden lg:block" />
                         </Link>
                         <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                            Doctor of Medicine  <FiArrowRight />
+                            Doctor of Medicine  <FiArrowRight className="hidden lg:block" />
                         </Link>
                     </div>
                     <div>
                         <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">Repairing</h3>
                         <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                            Mobile Repairing<FiArrowRight />
+                            Mobile Repairing<FiArrowRight className="hidden lg:block" />
                         </Link>
                         <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                            Car Repairing<FiArrowRight />
+                            Car Repairing<FiArrowRight className="hidden lg:block" />
                         </Link>
                         <Link to={`#`} key='' onClick={() => window.reload()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                            Plane Repairing<FiArrowRight />
+                            Plane Repairing<FiArrowRight className="hidden lg:block" />
                         </Link>
                     </div>
                 </div>
@@ -252,24 +252,24 @@ const Campuses = () => {
 
     return (
         <div>
-            <div className="md:w-[900px] sm:w-[400px] w-[340px]">
+            <div className="lg:w-[900px]">
                 <div className="flex justify-between gap-4">
-                    <div>
+                    <div className="md:block hidden">
                         <div className="my-2 hover:bg-gray-100 p-2 rounded cursor-pointer">
                             <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">IT Park</h3>
                             <h4 className="text-green text-[12px] md:text-[14px] font-medium">Zaitoon Ashraf IT Park</h4>
                         </div>
                         <img src="/IT-Park.png" alt="IT Park" className="w-60 rounded-lg" />
                     </div>
-                    <hr className="h-64 m-auto border-l border-t-0 border-gray-200 " />
+                    <hr className="h-64 m-auto border-l border-t-0 border-gray-200 md:block hidden" />
                     <div>
                         <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-blue-600">Karachi</h3>
                         {
                             karachiCampuses?.length > 0 ? (
                                 karachiCampuses?.map((item, index) => {
                                     return (
-                                        <Link to={`/campuses/${item.id}`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                                            {item.name} <FiArrowRight />
+                                        <Link to={`/campuses/${item.id}`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between text-left items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
+                                            {item.name} <FiArrowRight className="hidden lg:block" />
                                         </Link>
                                     )
                                 })
@@ -283,8 +283,8 @@ const Campuses = () => {
                             lahoreCampuses?.length > 0 ? (
                                 lahoreCampuses?.map((item, index) => {
                                     return (
-                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                                            {item.name} <FiArrowRight />
+                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center text-left my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
+                                            {item.name} <FiArrowRight className="hidden lg:block" />
                                         </Link>
                                     )
                                 })
@@ -298,8 +298,8 @@ const Campuses = () => {
                             islamabadCampuses?.length > 0 ? (
                                 islamabadCampuses?.map((item, index) => {
                                     return (
-                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
-                                            {item.name} <FiArrowRight />
+                                        <Link to={`/campuses`} key={index} onClick={() => useGetAllCourses()} className="flex justify-between items-center text-left my-2 text-[13px] md:text-sm text-neutral-700 hover:bg-gray-100 p-2 transition rounded hover:text-green">
+                                            {item.name} <FiArrowRight className="hidden lg:block" />
                                         </Link>
                                     )
                                 })
@@ -308,6 +308,7 @@ const Campuses = () => {
                         }
                     </div>
                 </div>
+                <Link to={`/campuses`} className="flex justify-end items-center"><p className="px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-100 text-blue-700 flex items-center justify-end">See All <FiArrowRight /></p></Link>
             </div >
         </div >
     );
@@ -328,7 +329,7 @@ const QuickLinks = () => {
 
 const TABS = [
     {
-        title: <Link to={"/campuses"}>Campuses</Link>,
+        title: "Campuses",
         Component: Campuses,
     },
     {
