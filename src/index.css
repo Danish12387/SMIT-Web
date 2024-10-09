@@ -1,11 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+h1,h2,h3{
+  color: #1e88e5;
+}
+h1 span, h2 span ,h3 span{
+  color:#8dc63f ;
+}
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;

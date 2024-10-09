@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Loader from '../Components/Loading';
 
-
 function Courses() {
   const [Course, setCourses] = useState([]);
   const [Loading, setLoading] = useState(true);
@@ -18,22 +17,19 @@ function Courses() {
     "Deployment and app store submission processes"
   ];
 
-
   const campuses = [
     { id: 1, name: "Blue Area Campus" },
     { id: 2, name: "Gulshan Campus" },
     { id: 3, name: "Model Town Campus" },
     { id: 4, name: "Nazimabad Campus" },
-  ]
+  ];
+
   const { id } = useParams();
-
-
 
   const fetchCourses = async () => {
     try {
       const res = await axios.get(`https://66f931ef2a683ce9731134aa.mockapi.io/api/v1/SMIT/${id}`);
       setCourses(res.data);
-      setInput({ ...input, course: res.data.title })
     } catch (error) {
       console.log(error.message);
     } finally {
@@ -51,78 +47,62 @@ function Courses() {
         :
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-3xl mx-auto">
-
-            <div className="flex justify-between  flex-row-reverse">
+            {/* Header section */}
+            <div className="flex flex-col md:flex-row-reverse justify-between items-center mb-6">
               <Link to="https://forms.saylaniwelfare.com/en" target="_blank">
-                <button className='btn btn-active px-[40px] bg-green text-white hover:bg-hoverGreen hover:scale-105 transition text-[12px] md:text-[13px]'>Enroll Now</button>
+                <button className='btn btn-active px-6 md:px-10 bg-green text-white hover:bg-hoverGreen hover:scale-105 transition text-sm md:text-base'>Enroll Now</button>
               </Link>
-              <div>
-
-                <h1 className="text-3xl card-title font-bold text-blue-600">{Course.title.slice(0, Course.title.indexOf(' '))} <span className='text-green'>{Course.title.slice(Course.title.indexOf(' '))}</span></h1>
+              <div className="text-center md:text-left mt-4 md:mt-0">
+                <h1 className="text-2xl md:text-3xl font-bold text-blue-600">
+                  {Course.title?.split(' ')[0]} <span className='text-green'>{Course.title?.split(' ').slice(1).join(' ')}</span>
+                </h1>
                 <div className="mt-2 badge border-green text-blue-600">
                   {Course.duration}
                 </div>
               </div>
-
-
             </div>
-            <div className='card'>
-              <div className="space-y-4 card-body">
+
+            {/* Card Section */}
+            <div className="card   rounded-lg">
+              <div className="space-y-6 card-body">
+                {/* Course Description */}
                 <div>
-                  <h2 className="text-xl font-semibold mb-2  text-blue-600">Course <span className='text-green'>Description</span> </h2>
-                  <p className="text-muted-foreground">
+                  <h2 className="text-lg md:text-xl font-semibold text-blue-600">Description</h2>
+                  <p className="text-sm mt-4 md:text-base text-muted-foreground">
                     {Course.description}
                   </p>
                 </div>
+
+                {/* Key Topics Section */}
                 <div>
-                  <h2 className="text-xl font-semibold mb-2 text-blue-600">Key <span className='text-green'>Topics</span></h2>
-                  <ul className="list-disc  list-inside text-muted-foreground">
-                    {skills.map((skill) => {
-                      return <li key={skill}>{skill}</li>
-                    })}
+                  <h2 className="text-lg md:text-xl font-semibold text-blue-600">Key <span className='text-green'>Topics</span></h2>
+                  <ul className="list-disc mt-4 list-inside text-sm md:text-base text-muted-foreground">
+                    {skills.map((skill) => (
+                      <li key={skill}>{skill}</li>
+                    ))}
                   </ul>
                 </div>
-                <div>
-                  <h2 className="text-xl font-semibold mb-3  text-blue-600">Available <span className='text-green'>Campuses</span> </h2>
 
-                  <div className="grid grid-cols-2 gap-2">
-                    {campuses.map((campus) => {
-                      return <Link to={`/campuses/${campus.id}`} className="badge badge-outline hover:scale-110 border-green text-blue-600 font-semibold p-2.5" key={campus.id}>{campus.name}</Link>
-                    })}
+                {/* Campuses Section */}
+                <div>
+                  <h2 className="text-lg md:text-xl font-semibold text-blue-600">Available <span className='text-green'>Campuses</span></h2>
+                  <div className=" mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {campuses.map((campus) => (
+                      <Link
+                        to={`/campuses/${campus.id}`}
+                        className="badge badge-outline w-56 transition transform sm:scale-105 hover:scale-110 border-green text-blue-600 font-semibold p-2.5 text-center"
+                        key={campus.id}
+                      >
+                        {campus.name}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        // <div class="container mx-auto p-6">
-        //     <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-        //         <h1 class="text-3xl font-bold mb-4 text-blue-600">{Course?.title}</h1>
-        //         <p class="text-gray-700 mb-4">{Course?.description}</p>
-        //         <ul class="list-disc list-inside text-gray-600">
-        //             <li>Duration: {Course?.duration}</li>
-        //             <li>Prerequisites: {Course?.prerequisites}</li>
-        //             <li>Certification: {Course?.certification}</li>
-        //         </ul>
-        //     </div>
-
-        //     <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-        //         <h2 class="text-2xl font-semibold mb-4">Available <span className='text-green-600'>Campuses</span></h2>
-        //         <ul class="space-y-2">
-        //             {
-        //                 Course?.campuses?.map((item, index) => {
-        //                     return (
-        //                         <li class="text-gray-700" key={index}>{item}</li>
-        //                     )
-        //                 })
-        //             }
-        //         </ul>
-        //     </div>
-
-
-
-      }
+}
     </>
   )
 }

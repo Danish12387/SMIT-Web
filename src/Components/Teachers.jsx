@@ -47,16 +47,19 @@ const Teachers = () => {
         {
             image: "/Instructors1.jpeg",
             title: "Sir Kamran",
+            role: "@saylaniwelfare",
             description: "Senior Developer at Saylani. Teaches Web Development."
         },
         {
             image: "/Instructors2.jpeg",
             title: "Sir Bilal",
+            role: "@saylaniwelfare",
             description: "Full-stack Developer at Saylani. Web Development Instructor."
         },
         {
             image: "/Instructors3.jpeg",
             title: "Sir Ghous",
+            role: "@saylaniwelfare",
             description: "Mobile App Developer at Saylani. Focuses on App Development."
         },
     ]
@@ -70,16 +73,20 @@ const Teachers = () => {
                     {
                         CourseTeachers.map((item, index) => {
                             return (
-                                <div key={index} className="flex justify-center h-[400px]" data-aos="zoom-in">
-                                    <div className="card bg-base-100 shadow-xl cursor-pointer mx-1 sm:mx-2 md:mx-5 h-96">
-                                        <figure className="h-[70%]">
+                                <div key={index} className="flex justify-center h-80" data-aos="zoom-in">
+                                    <div className="card dark:bg-[#1D2430] dark:border-none border border-gray-100 flex flex-col p-10 justify-around shadow-xl cursor-pointer mx-1 sm:mx-2 md:mx-4 h-72 rounded-none">
+                                        <p className="text-lightText dark:text-darkText text-lg mb-6">"{item.description}"</p>
+                                        <hr className="w-[100%] mx-auto border-gray-200" />
+                                        <div className="flex items-center">
                                             <img
                                                 src={item.image}
-                                                alt="Course" />
-                                        </figure>
-                                        <div className="card-body">
-                                            <h2 className="card-title">{item.title}</h2>
-                                            <p>{item.description}</p>
+                                                alt={item.title}
+                                                className="w-12 h-12 rounded-full mr-4"
+                                            />
+                                            <div>
+                                                <h2 className="text-lightText dark:text-darkText font-semibold">{item.title}</h2>
+                                                <p className="text-gray-400 text-sm">{item.role}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

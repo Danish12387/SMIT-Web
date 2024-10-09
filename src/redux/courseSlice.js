@@ -4,7 +4,7 @@ const courseSlice = createSlice({
     name: 'courses',
     initialState: {
         courses: null,
-        loading: true
+        loading: true,
     },
     reducers: {
         setCourse: (state, action) => {
@@ -12,7 +12,7 @@ const courseSlice = createSlice({
         },
         setLoading: (state) => {
             state.loading = false;
-        }
+        },
     }
 })
 

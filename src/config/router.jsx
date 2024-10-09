@@ -4,6 +4,11 @@ import MainLayout from '../Layout/MainLayout';
 import Loading from '../Components/Loading';
 import SingleCampus from '../Pages/SingleCampus';
 import NotFoundPage from '../Components/NotFoundPage';
+import StudentSuccessStory from '../Pages/SucessStory';
+import AdminManagement from '../Pages/AdminPanel';
+import AdminLogin from '../Pages/AdminLogin';
+import AdminDashboard from '../Pages/AdminDashboard';
+import { AuthProvider } from './AuthContext';
 
 const Home = lazy(() => import('../Pages/Home'));
 const About = lazy(() => import('../Pages/About'));
@@ -22,6 +27,22 @@ const router = createBrowserRouter([
             {
                 path: "/about",
                 element: <About />,
+            },
+            {
+                path: "/admin-panel",
+                element: <AdminDashboard />,
+            },
+            {
+                path: "/admin-panel/login",
+                element: <AdminLogin />,
+            },
+            {
+                path: "/admin-panel/users",
+                element: <AdminManagement />,
+            },
+            {
+                path: "/sucess-story/:name",
+                element: <StudentSuccessStory />,
             },
             {
                 path: "/apply/:id",
@@ -45,9 +66,12 @@ const router = createBrowserRouter([
 
 const AppRouter = () => {
     return (
+        <AuthProvider>
+
         <Suspense fallback={<Loading />}>
             <RouterProvider router={router} />
         </Suspense>
+        </AuthProvider>
     );
 };
 

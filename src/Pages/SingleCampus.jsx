@@ -10,7 +10,7 @@ export function Avatar({ image, alt }) {
       </div>
     );
   }
-
+  
   export function AvatarFallback({ initials }) {
     return (
       <div className="avatar placeholder">
@@ -23,6 +23,7 @@ export function Avatar({ image, alt }) {
 export default function ResponsiveSingleCampusPage() {
   const campus = {
     name: "Bahadurabad Campus",
+    city:"karachi",
     address: "https://maps.app.goo.gl/YCAaJ4izxm5qQLYy8",
     website: "https://riverside.university.edu",
     operatingHours: "Monday - Friday: 8:00 AM - 6:00 PM",
@@ -30,7 +31,7 @@ export default function ResponsiveSingleCampusPage() {
       name: "Zeeshan Aijaz",
       title: "Campus Director",
       email: "zeeshanAijaz@smit.edu",
-      phone: "+92 345 5102393",
+      phone: "03112676906",
       image: "/Instructors2.jpeg?height=128&width=128"
     },
     staff: [
@@ -46,15 +47,15 @@ export default function ResponsiveSingleCampusPage() {
     <div className="container mx-auto px-4 py-8">
       <div className=" mb-8">
         <div className="card-body space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-            <h2 className="card-title text-2xl sm:text-3xl font-bold mb-2 sm:mb-0 text-blue-600">{campus.name.slice(0, campus.name.indexOf(' '))} <span className='text-green'>{campus.name.slice( campus.name.indexOf(' '))}</span></h2>
+          <div className="flex flex-wrap flex-col sm:flex-row sm:items-center sm:justify-between">
+            <h2 className="card-title text-2xl sm:text-3xl font-bold mb-2 sm:mb-0 ">{campus.name.slice(0, campus.name.indexOf(' '))} <span className=''>{campus.name.slice( campus.name.indexOf(' '))}</span></h2>
             <div className="badge badge-outline border-green text-blue-600 text-sm self-start sm:self-auto">
-              Karachi Campus
+              {campus.city} Campus
             </div>
           </div>
           <div className="flex items-center text-sm text-gray-500">
             <MapPin className="h-4 w-4 mr-2 flex-shrink-0" color="blue" />
-            <Link to={campus.address} className="link link-hover" target="_blank">{campus.address}</Link>
+            <Link to={campus.address} className=" dark:text-white link link-hover" target="_blank">{campus.address}</Link>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -69,7 +70,7 @@ export default function ResponsiveSingleCampusPage() {
                     </a>
                   </div> */}
                   <div className="flex items-center">
-                    <Clock className="h-4 w-4 mr-2 flex-shrink-0" color="blue"/>
+                    <Clock className="h-4 w-4 mr-2 flex-shrink-0" color="#1e88e5"/>
                     <span>{campus.operatingHours}</span>
                   </div>
                 </div>
@@ -111,8 +112,8 @@ export default function ResponsiveSingleCampusPage() {
               <div className="card bg-base-100 shadow-lg">
                 <div className="card-body p-4">
                   <div className="flex items-center mb-4">
-                    <Users className="h-5 w-5 mr-2 flex-shrink-0" color="blue"/>
-                    <h3 className="text-lg font-semibold">Key <span>Personnel</span></h3>
+                    <Users className="h-5 w-5 mr-2 flex-shrink-0" color="#1e88e5"/>
+                    <h3 className="text-lg font-semibold text-green">Key Personnel</h3>
                   </div>
                   <ul className="space-y-4">
                     {campus.staff.map((staffMember, index) => (

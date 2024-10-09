@@ -24,10 +24,10 @@ function Courses() {
                                     <div className="card-body p-4">
                                         <h2 className="card-title">{item.title}</h2>
                                         <p>{item.description}</p>
-                                        <Link className='flex justify-between items-center w-20 cursor-pointer text-blue-700 text-sm' to={`/apply/${item.id}`}>See More <FaArrowUpRightFromSquare /></Link>
+                                        {/* <Link className='flex justify-between items-center w-20 cursor-pointer text-blue-700 text-sm' to={`/apply/${item.id}`}>See More <FaArrowUpRightFromSquare /></Link> */}
                                     </div>
-                                    <Link to="https://forms.saylaniwelfare.com/en" target='_blank' className="btn btn-active bg-green text-white hover:bg-hoverGreen p-0 shadow-lg">
-                                        <button>Apply Now</button>
+                                    <Link to={`/apply/${item.id}`} className="btn btn-active bg-green text-white hover:bg-hoverGreen p-0 shadow-lg">
+                                        <button className='flex items-center justify-between gap-2'>See More <FaArrowUpRightFromSquare /></button>
                                     </Link>
                                 </div>
                             </div>
