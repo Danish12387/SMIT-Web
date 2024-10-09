@@ -74,9 +74,7 @@ const Teachers = () => {
                         CourseTeachers.map((item, index) => {
                             return (
                                 <div key={index} className="flex justify-center h-80" data-aos="zoom-in">
-                                    <div className="card dark:bg-[#1D2430] dark:border-none border border-gray-100 flex flex-col p-10 justify-around shadow-xl cursor-pointer mx-1 sm:mx-2 md:mx-4 h-72 rounded-none">
-                                        <p className="text-lightText dark:text-darkText text-lg mb-6">"{item.description}"</p>
-                                        <hr className="w-[100%] mx-auto border-gray-200" />
+                                    <div className="card dark:bg-[#1D2430] dark:border-none border border-gray-100 flex flex-col px-10 py-6 justify-around shadow-xl cursor-pointer mx-1 sm:mx-2 md:mx-4 h-64 rounded-none">
                                         <div className="flex items-center">
                                             <img
                                                 src={item.image}
@@ -88,6 +86,8 @@ const Teachers = () => {
                                                 <p className="text-gray-400 text-sm">{item.role}</p>
                                             </div>
                                         </div>
+                                        <hr className="w-[100%] mx-auto border-gray-200" />
+                                        <p className="text-lightText h-[40%] dark:text-darkText text-lg mb-6">"{item.description}"</p>
                                     </div>
                                 </div>
                             );

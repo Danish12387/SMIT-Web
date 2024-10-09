@@ -28,7 +28,7 @@ const ChairmanAbout = () => {
                     </div>
                 </div>
             </section>
-            <hr className="w-[90%] mx-auto border-gray-200" />
+            <hr className="w-[90%] mx-auto border-gray-200 dark:border-gray-700" />
             <section className="flex items-center justify-between my-14">
                 <div className="flex md:flex-row-reverse flex-col-reverse items-center justify-around rounded-lg w-[90%] mx-auto p-4">
                     <div className="md:w-1/2 text-center md:text-left mb-6 md:mb-0 space-y-4">

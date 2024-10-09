@@ -16,13 +16,13 @@ function Home() {
         <div className='max-w-screen-2xl mx-auto'>
             <ImageSlider />
             <About />
-            <hr className="w-[90%] mx-auto border-gray-200" />
+            <hr className="w-[90%] mx-auto border-gray-200 dark:border-gray-700" />
             <Courses />
-            <hr className="w-[90%] mx-auto border-gray-200" />
+            <hr className="w-[90%] mx-auto border-gray-200 dark:border-gray-700" />
             <ChairmanAbout />
-            <hr className="w-[90%] mx-auto border-gray-200" />
+            <hr className="w-[90%] mx-auto border-gray-200 dark:border-gray-700" />
             <Teachers />
-            <hr className="w-[90%] mx-auto border-gray-200" />
+            <hr className="w-[90%] mx-auto border-gray-200 dark:border-gray-700" />
             <News />
             <Contact />
         </div>

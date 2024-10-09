@@ -9,7 +9,7 @@ function ImageSlider() {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        navigation={true}
+        // navigation={true}
         pagination={{ clickable: true }}
         autoplay={{
           delay: 2000,

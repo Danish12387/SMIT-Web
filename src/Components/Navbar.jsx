@@ -14,9 +14,17 @@ const NavbarBar = () => {
     setIsOpen(!isOpen);
   };
 
+  const debounce = (func, delay) => {
+    let timeout;
+    return (...args) => {
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), delay);
+    };
+  };
+
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
+    const handleScroll = debounce(() => {
+      const currentScrollPos = Math.ceil(window.scrollY);
 
       if (currentScrollPos > prevScrollPos) {
         setIsVisible(false);
@@ -25,7 +33,7 @@ const NavbarBar = () => {
       }
 
       setPrevScrollPos(currentScrollPos);
-    };
+    }, 100); // Adjust the delay as needed
 
     window.addEventListener("scroll", handleScroll);
 
@@ -36,7 +44,7 @@ const NavbarBar = () => {
 
   return (
     <>
-      <div className={`navbar bg-base-100 sticky ${isVisible ? "top-0" : "-top-[78px]"} transition-all duration-300 top-0 z-50 shadow-md px-6 md:px-10 h-16 md:h-20`}>
+      <div className={`navbar bg-base-100 fixed ${isVisible ? "top-0" : "-top-20"} transition-all duration-300 top-0 z-50 shadow-md px-6 md:px-10 h-16 md:h-20`}>
         <div className="navbar-start">
           <Link to="/">
             <img
@@ -106,7 +114,7 @@ const NavbarBar = () => {
       </div>
       {/* {
         isOpen && ( */}
-      <Collapse open={isOpen} className={`text-center fixed top-0 w-full h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 z-30 bg-white dark:bg-[#1D232A] ${isOpen && "overflow-visible"}`}>
+      <Collapse open={isOpen} className={`text-center fixed top-0 w-full h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 z-30 lg:bg-transparent bg-white dark:bg-[#1D232A] ${isOpen && "overflow-visible"}`}>
         <div className="w-full flex justify-end">
           <button className="btn btn-square lg:hidden" onClick={toggleMenu}>
             <X />
