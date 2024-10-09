@@ -36,7 +36,7 @@ const NavbarBar = () => {
 
   return (
     <>
-      <div className={`navbar bg-base-100 fixed ${isVisible ? "top-0" : "-top-[78px]"} transition-all duration-300 top-0 z-50 shadow-md px-6 md:px-10 h-16 md:h-20`}>
+      <div className={`navbar bg-base-100 sticky ${isVisible ? "top-0" : "-top-[78px]"} transition-all duration-300 top-0 z-50 shadow-md px-6 md:px-10 h-16 md:h-20`}>
         <div className="navbar-start">
           <Link to="/">
             <img
