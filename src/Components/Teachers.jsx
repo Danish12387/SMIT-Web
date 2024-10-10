@@ -86,7 +86,7 @@ const Teachers = () => {
                                                 <p className="text-gray-400 text-sm">{item.role}</p>
                                             </div>
                                         </div>
-                                        <hr className="w-[100%] mx-auto border-gray-200" />
+                                        <hr className="w-[100%] mx-auto border-gray-200 dark:border-gray-700" />
                                         <p className="text-lightText h-[40%] dark:text-darkText text-lg mb-6">"{item.description}"</p>
                                     </div>
                                 </div>

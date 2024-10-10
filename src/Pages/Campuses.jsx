@@ -63,7 +63,7 @@ const News = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
               {cities.map((e) => (
-                <li className="hover:bg-blue-400 rounded"
+                <li className="dark:hover:bg-gray-800 hover:bg-gray-200 rounded"
                   key={e.id}>
                   <a onClick={() => setSelectCity(e.city)}>{e.city}</a>
                 </li>
