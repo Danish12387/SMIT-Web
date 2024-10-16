@@ -34,7 +34,7 @@ function Courses() {
                                     <div className="card-body p-4">
                                         <h2 className="card-title">{item.title}</h2>
                                         <div className='relative'>
-                                            <p className={`text-justify h-fit min-h-[72px] ${!isExpanded ? 'line-clamp-3' : 'text-sm mb-6'}`}>
+                                            <p className={`h-fit min-h-[72px] ${!isExpanded ? 'line-clamp-3' : 'text-sm mb-6'}`}>
                                                 {item.description}
                                             </p>
                                             {

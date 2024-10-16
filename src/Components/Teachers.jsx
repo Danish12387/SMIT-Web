@@ -74,7 +74,7 @@ const Teachers = () => {
                         CourseTeachers.map((item, index) => {
                             return (
                                 <div key={index} className="flex justify-center h-80" data-aos="zoom-in">
-                                    <div className="card dark:bg-[#1D2430] dark:border-none border border-gray-100 flex flex-col px-10 py-6 justify-around shadow-xl cursor-pointer mx-1 sm:mx-2 md:mx-4 h-64 rounded-none">
+                                    <div className="card bg-white dark:bg-[#1D2430] dark:border-none border border-gray-100 flex flex-col px-10 py-6 justify-around shadow-xl cursor-pointer mx-1 sm:mx-2 md:mx-4 h-64 rounded-none">
                                         <div className="flex items-center">
                                             <img
                                                 src={item.image}

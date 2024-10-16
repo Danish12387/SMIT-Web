@@ -39,7 +39,7 @@ const News = () => {
 
   return (
     <div className='container mx-auto h-full min-h-screen'>
-      <div className="navbar shadow-md bg-base-100 my-5 rounded-lg">
+      <div className="navbar shadow-md my-5 rounded-lg bg-white dark:bg-[#1D232A]">
         <div className="navbar-start">
           <div className="dropdown">
             <>
@@ -82,7 +82,7 @@ const News = () => {
         filterCity.map((data) => (
           <div
             key={data.id}
-            className="card mx-5 sm:mx-10 my-10 lg:flex-row-reverse bg-base-500 shadow-xl transform transition-all duration-300 hover:scale-[1.01] p-4 overflow-hidden"
+            className="card bg-white dark:bg-[#1D232A] mx-5 sm:mx-10 my-10 lg:flex-row-reverse bg-base-500 shadow-xl transform transition-all duration-300 hover:scale-[1.01] p-4 overflow-hidden"
             data-aos="fade-up">
             <figure className="w-full md:w-1/3 h-auto md:h-full">
               <img
