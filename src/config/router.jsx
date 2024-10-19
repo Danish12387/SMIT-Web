@@ -9,6 +9,7 @@ import AdminManagement from '../Pages/AdminPanel';
 import AdminLogin from '../Pages/AdminLogin';
 import AdminDashboard from '../Pages/AdminDashboard';
 import { AuthProvider } from './AuthContext';
+import AllCoursesPage from '../Pages/AllCourses';
 
 const Home = lazy(() => import('../Pages/Home'));
 const About = lazy(() => import('../Pages/About'));
@@ -55,6 +56,9 @@ const router = createBrowserRouter([
             {
                 path: "/campuses",
                 element: <Campuses />,
+            },    {
+                path: "/courses",
+                element: <AllCoursesPage />,
             },
         ]
     },

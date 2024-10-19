@@ -223,6 +223,8 @@ const Courses = () => {
                         </Link>
                     </div>
                 </div>
+                <Link to={`/courses`} className="flex justify-end items-center"><p className="px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-gray-100 text-blue-700 flex items-center justify-end">See All <FiArrowRight /></p></Link>
+
             </div >
         </div >
     );

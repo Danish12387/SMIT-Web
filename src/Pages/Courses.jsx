@@ -87,13 +87,13 @@ function Courses() {
                 <div>
                   <h2 className="text-lg md:text-xl font-semibold text-blue-600">Available <span className='text-green'>Campuses</span></h2>
                   <div className=" mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {campuses.map((campus) => (
+                    {Course.campuses.map((campus,id) => (
                       <Link
-                        to={`/campuses/${campus.id}`}
+                        to={`/campuses/${id}`}
                         className="badge badge-outline w-56 transition transform sm:scale-105 hover:scale-110 border-green text-blue-600 font-semibold p-2.5 text-center"
                         key={campus.id}
                       >
-                        {campus.name}
+                        {campus}
                       </Link>
                     ))}
                   </div>
