@@ -48,12 +48,12 @@ export default function ResponsiveSingleCampusPage() {
       <div className=" mb-8">
         <div className="card-body space-y-4">
           <div className="flex flex-wrap flex-col sm:flex-row sm:items-center sm:justify-between">
-            <h2 className="card-title text-2xl sm:text-3xl font-bold mb-2 sm:mb-0 ">{campus.name.slice(0, campus.name.indexOf(' '))} <span className=''>{campus.name.slice( campus.name.indexOf(' '))}</span></h2>
+            <h2 className="card-title lg:text-2xl   font-bold mb-2 sm:mb-0 ">{campus.name.slice(0, campus.name.indexOf(' '))} <span className=''>{campus.name.slice( campus.name.indexOf(' '))}</span></h2>
             <div className="badge badge-outline border-green text-blue-600 text-sm self-start sm:self-auto">
               {campus.city} Campus
             </div>
           </div>
-          <div className="flex items-center text-sm text-gray-500">
+          <div className="flex items-center lg:text-lg md:text-sm text-[0.5rem] text-gray-500">
             <MapPin className="h-4 w-4 mr-2 flex-shrink-0" color="blue" />
             <Link to={campus.address} className=" dark:text-white link link-hover" target="_blank">{campus.address}</Link>
           </div>
@@ -78,7 +78,7 @@ export default function ResponsiveSingleCampusPage() {
 
               <div>
                 <h3 className="text-xl font-semibold mb-2">Campus <span>Manager</span></h3>
-                <div className="card card-compact bg-base-100 shadow-lg">
+                <div className="card card-compact bg-base-100 lg:shadow-lg md:shadow-none">
                   <div className="card-body flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4">
                     <Avatar className="h-24 w-24" image={campus.manager.image} alt={campus.manager.name}>
                       <img src={campus.manager.image} alt={campus.manager.name} />
