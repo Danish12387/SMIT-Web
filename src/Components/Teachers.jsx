@@ -68,7 +68,7 @@ const Teachers = () => {
         <div className="my-20 container mx-auto">
             <h1 className='text-center text-[40px] font-semibold text-blue-600 anim-zoom'>Our <span className='text-green'>Teachers</span></h1>
 
-            <div className="my-20 min-h-[400px] w-[90%] sm:w-full mx-auto px-5 sm:px-10">
+            <div className="my-20 min-h-[400px] w-[90%] sm:w-full mx-auto px-0 sm:px-10">
                 <Slider {...settings}>
                     {
                         CourseTeachers.map((item, index) => {

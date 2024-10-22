@@ -19,7 +19,7 @@ function App() {
   useScrollReveal();
 
   return (
-    <div className='light:bg-[#ffffffab]'>
+    <div>
       {
         loading ? <Loading /> : <AppRouter />
       }

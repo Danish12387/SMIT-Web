@@ -7,7 +7,7 @@ import 'swiper/swiper-bundle.css';
 function ImageSlider() {
   return (
     <div className='relative'>
-      <div className='flex justify-center items-center absolute top-0 z-40 bg-[#000000c7] h-full w-full'>
+      <div className='flex justify-center items-center absolute top-0 z-30 bg-[#000000c7] h-full w-full'>
         <div className='w-[70%] '>
           <h1 className='flex lg:flex-row  flex-col  items-center justify-center anim-bottom anim-zoom text-green text-6xl text-center font-semibold'>Welcome to <img className='h-16 mx-2 mb-3' src="/smit-logo.png" alt="logo" /></h1>
           <h2 className='text-center mt-5 text-white text-2xl font-semibold anim-bottom'>One of the largest Tech Institutions to offer <span> <TypeAnimation

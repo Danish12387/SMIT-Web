@@ -112,8 +112,8 @@ const NavbarBar = () => {
         </div>
         <ThemeController />
       </div>
-      
-      <Collapse open={isOpen} className={`text-center fixed top-0 w-full h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 z-30 lg:bg-transparent bg-white dark:bg-[#1D232A] ${isOpen && "overflow-visible"}`}>
+
+      <Collapse open={isOpen} className={`text-center fixed top-0 w-full h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 z-40 lg:bg-transparent bg-white dark:bg-[#1D232A] ${isOpen && "overflow-visible"}`}>
         <div className="w-full flex justify-end">
           <button className="btn btn-square lg:hidden" onClick={toggleMenu}>
             <X />
